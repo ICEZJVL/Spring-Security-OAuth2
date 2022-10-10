@@ -1,6 +1,6 @@
 package com.cos.security1.config.oauth2;
 
-import com.cos.security1.Repository.UserRepository;
+import com.cos.security1.repository.UserRepository;
 import com.cos.security1.auth.PrincipalDetails;
 import com.cos.security1.config.oauth2.provider.GoolgeUserInfo;
 import com.cos.security1.config.oauth2.provider.OAuth2UserInfo;
