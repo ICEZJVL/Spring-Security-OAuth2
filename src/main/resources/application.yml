@@ -1,0 +1,43 @@
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/security?serverTimezone=Asia/Seoul
+    username: cos
+    password: cos1234
+
+  mvc:
+    view:
+      pathmatch:
+        matching-strategy: ant_path_matcher
+
+  jpa:
+    hibernate:
+      ddl-auto: create #create update none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 214459883138-f3cii4b6j3r6n7233b3ra7q3baub4a4u.apps.googleusercontent.com
+            client-secret: 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
+            scope: email,profile
+
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
